@@ -10,10 +10,19 @@ on:
 jobs:
   build:
     runs-on: [ ubuntu-latest]
-    steps:
-      - run: 'echo ${{ github.event_name }}'
-      - run: 'echo ${{ github.branch }}'
-      - run: 'ls ${{ github.workspace }}'
+    steps: 
+      - run: echo "EventName: ${{ github.event_name }}"
+      - run: echo "${{ github.branch }}"
+      
+      - uses: actions/checkout@v3.5.2
+      
+      - name: Repository Files
+        run: echo "${{ github.repository }}"
+      
+      
+
+      
+    
       
 
   
