@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "EventName = ${{ github.event_name }}"
-      - run: echo "$Branch = {{ github.ref }}"
+      - run: echo "$Branch = ${{ github.ref }}"
 
       - uses: actions/checkout@v3.5.2
 
